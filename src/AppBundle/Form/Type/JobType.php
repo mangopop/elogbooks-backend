@@ -16,6 +16,8 @@ class JobType extends AbstractApiType
     {
         $builder
             ->add('description', null, [])
+            ->add('status', null, [])
+            ->add('inProgress', null, [])
         ;
     }
 

@@ -75,6 +75,13 @@ class JobFilter
      *
      * @Assert\Type(type="string")
      */
+    protected $inProgress;
+
+    /**
+     * @var string
+     *
+     * @Assert\Type(type="string")
+     */
     protected $type;
 
     /**
@@ -180,6 +187,26 @@ class JobFilter
      public function setStatus($status)
      {
         $this->status = $status;
+
+        return $this;
+     }
+
+    /**
+     * @return string
+     */
+    public function getInProgress()
+    {
+      return $this->inProgress;
+    }
+
+    /**
+     * @param string $inProgress
+     *
+     * @return self
+     */
+     public function setInProgress($inProgress)
+     {
+        $this->inProgress = $inProgress;
 
         return $this;
      }
